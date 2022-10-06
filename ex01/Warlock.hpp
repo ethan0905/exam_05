@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:27:12 by esafar            #+#    #+#             */
-/*   Updated: 2022/10/06 17:16:31 by esafar           ###   ########.fr       */
+/*   Created: 2022/10/06 15:27:22 by esafar            #+#    #+#             */
+/*   Updated: 2022/10/06 17:09:53 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class   Warlock {
     
     public:
-        Warlock( Warlock const & src );
         Warlock( const std::string &name, const std::string &title );
+        Warlock( Warlock const & src );
         ~Warlock( void );
 
         const std::string &getName( void )const ;
@@ -29,12 +29,13 @@ class   Warlock {
 
         void    introduce( void )const;
 
+        void    learnSpell( ASpell const *src );
+
     private:
-        std::string _name;
-        std::string _title;
-        
         Warlock( void );
         Warlock &operator=( Warlock const & src);
+        std::string _name;
+        std::string _title;
 };
 
 #endif

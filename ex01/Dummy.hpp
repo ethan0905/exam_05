@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dummy.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:27:00 by esafar            #+#    #+#             */
-/*   Updated: 2022/10/06 15:27:01 by esafar           ###   ########.fr       */
+/*   Created: 2022/10/06 15:27:22 by esafar            #+#    #+#             */
+/*   Updated: 2022/10/06 15:27:23 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Warlock.hpp"
+#ifndef Dummy_HPP
+# define Dummy_HPP
 
-int main()
-{
-  Warlock const richard("Richard", "Mistress of Magma");
-  richard.introduce();
-  std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+#include <iostream>
+#include "ATarget.hpp"
 
-  Warlock* jack = new Warlock("Jack", "the Long");
-  jack->introduce();
-  jack->setTitle("the Mighty");
-  jack->introduce();
+class   Dummy : ATarget {
+    
+    public:
+        Dummy( void );
+        ~Dummy( void );
+        
+        virtual ATarget  *clone( void )const;        
+};
 
-  delete jack;
-
-  return (0);
-}
+#endif

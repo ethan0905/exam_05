@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dummy.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:27:00 by esafar            #+#    #+#             */
-/*   Updated: 2022/10/06 15:27:01 by esafar           ###   ########.fr       */
+/*   Created: 2022/10/06 15:27:19 by esafar            #+#    #+#             */
+/*   Updated: 2022/10/06 15:27:20 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Warlock.hpp"
+#include "Dummy.hpp"
 
-int main()
-{
-  Warlock const richard("Richard", "Mistress of Magma");
-  richard.introduce();
-  std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+Dummy::Dummy( void ) : ATarget("Target Practice Dummy") {}
 
-  Warlock* jack = new Warlock("Jack", "the Long");
-  jack->introduce();
-  jack->setTitle("the Mighty");
-  jack->introduce();
+Dummy::~Dummy( void ) {
 
-  delete jack;
+    std::cout << ": My job here is done!" << std::endl;
 
-  return (0);
+    return ;
+}
+
+ATarget  *Dummy::clone( void )const {
+
+    return (new Dummy());
 }
