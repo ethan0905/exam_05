@@ -16,8 +16,6 @@ Fwoosh::Fwoosh( void ) : ASpell("Fwoosh", "fwooshed") {}
 
 Fwoosh::~Fwoosh( void ) {
 
-    std::cout << ": My job here is done!" << std::endl;
-
     return ;
 }
 

@@ -16,8 +16,6 @@ Dummy::Dummy( void ) : ATarget("Target Practice Dummy") {}
 
 Dummy::~Dummy( void ) {
 
-    std::cout << ": My job here is done!" << std::endl;
-
     return ;
 }
 

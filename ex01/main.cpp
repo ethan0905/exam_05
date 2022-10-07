@@ -6,15 +6,15 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:27:15 by esafar            #+#    #+#             */
-/*   Updated: 2022/10/06 16:38:02 by esafar           ###   ########.fr       */
+/*   Updated: 2022/10/07 11:00:54 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
 #include "ASpell.hpp"
 #include "ATarget.hpp"
-// #include "Warlock.hpp"
-// #include "Warlock.hpp"
+#include "Fwoosh.hpp"
+#include "Dummy.hpp"
 
 int main()
 {
